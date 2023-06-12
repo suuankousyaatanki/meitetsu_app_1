@@ -11,7 +11,7 @@ def predict(img):
     # ネットワークの定義
     net = Net().cpu().eval()
     # 学習済みモデルの重み
-    net.load_state_dict(torch.load("./src/meitetsu_ver1 (1).pt", map_location=torch.device("cpu")))
+    net.load_state_dict(torch.load("./meitetsu_ver1 (1).pt", map_location=torch.device("cpu")))
     # データの前処理
     img = transform(img)
     img = img.unsqueeze(0) # 1次元増やす
